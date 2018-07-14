@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/lib/fontawesome/fa-svg-with-js.css">
+    <link rel="stylesheet" href="css/lib/jquery.lineProgressbar.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="js/lib/jquery-3.3.1.js"></script>
+
+    <script src="js/lib/fontawesome/fontawesome-all.min.js"></script>
+    <script src="js/lib/jquery.lineProgressbar.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Circle Bar -->
+    <link rel="stylesheet" type="text/css" href="css/lib/progresscircle.css">
+    <script src="js/lib/progresscircle.js"></script>
+
+    <!-- Google map -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB589S7wLGqQl7P6qRdUij07oVizn-m0Ek&callback=initMap">
+    </script>
+    
+
+    <title>TruyenHo's Curriculum Vitae</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main-1">Justin</span>
+                <span class="heading-primary--main-2">is my nick name</span>
+                <span class="heading-primary--sub u-margin-top-small">
+                    And I am a
+                    <span class="heading-primary--sub-span">front-end developer</span>, non-professional
+                    <span class="heading-primary--sub-span">designer</span> as well as a passionate
+                    <span class="heading-primary--sub-span">photographer</span>.
+                </span>
+            </h1>
+        </div>
+    </header>
+
+    <div class="checkTop"></div>
+    <nav class="nav">
+        <div class="row">
+            <div class="col-1-of-3 nav__logo-box">
+                <img src="img/logo-small.png" alt="Curriculum Vitae" class="nav__logo">
+                <p class="nav__logo-text">Curriculum Vitae</p>
+            </div>
+            <div class="col-2-of-3 u-float-right">
+                <ul class="nav__menu">
+                    <li class="nav__menu-list">
+                        <a href="#about" class="nav__menu-list--link">About me</a>
+                    </li>
+                    <li class="nav__menu-list">
+                        <a href="#skill" class="nav__menu-list--link">My Skills</a>
+                    </li>
+                    <li class="nav__menu-list">
+                        <a href="#education" class="nav__menu-list--link">Education</a>
+                    </li>
+                    <li class="nav__menu-list">
+                        <a href="#experience" class="nav__menu-list--link">Experience</a>
+                    </li>
+                    <li class="nav__menu-list">
+                        <a href="#contact" class="nav__menu-list--link">Contact</a>
+                    </li>
+                </ul>
+
+                <ul class="nav__dropdown">
+                    <input type="checkbox" class="nav__dropdown--checkbox" id="navi-toggle">
+
+                    <label for="navi-toggle" class="nav__dropdown--button">
+                        <span class="navigation__icon">&nbsp;</span>
+                    </label>
+                    
+                    <div id="dropdown" class="nav__dropdown--content">
+                        <a href="#about">About Me</a>
+                        <a href="#skill">My Skills</a>
+                        <a href="#education">Education</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </ul>
+                
+                <!-- Navbar active -->
+                <script>
+                    var selector = '.nav__menu-list';
+                    $(selector).on('click', function(){
+                        $(selector).removeClass('active');
+                        $(this).addClass('active');
+                    });
+
+                    $('nav').find('a').on('click', function () {
+                        var $el = $(this)
+                        , id = $el.attr('href');
+
+                        $('html, body').animate({
+                        scrollTop: $(id).offset().top}, 1000);
+                    });
+
+                    var home = '.nav__logo-box';
+                    $(home).on('click', function() {
+                        $("html, body").animate({ scrollTop: 0 }, 500);
+                    });
+                </script>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section-about" id="about">
+            <div class="u-text-center u-padding-top-large u-margin-bottom-medium">
+                <h2 class="heading-secondary u-text-green">
+                    <i class="fas fa-user"></i>
+                    <span class="heading-secondary--span">about me</span>
+                </h2>
+            </div>
+
+            <div class="row u-padding-bottom-large">
+                <div class="about__favorit-quote u-margin-bottom-big">
+                    <p class="about__favorit-quote--text">
+                        <span class="about__favorit-quote--text-1">Favorite quote:</span>
+                        <br>
+                        <q><i>Being the richest man in the cemetery doesn't matter to me. Going to bed at night saying we've done something wonderful... that's what matters to me.</i></q>
+                        <br>
+                        <span class="about__favorit-quote--text-2">
+                        - <i>Steve Jobs</i>
+                        </span>
+                    </p>
+                </div>
+
+                <div class="col-1-of-2">
+                    <img src="img/about-small.jpg" alt="Truyen Ho" class="about__img">
+                </div>
+
+                <div class="col-1-of-2">
+                    <div class="about__detail">
+                        <h3 class="heading-tertiary u-text-green u-margin-bottom-small">truyen ho</h3>
+                        <h3 class="heading-tertiary--sub u-text-black u-margin-bottom-small">front-end developer &#8226; web designer &#8226; photographer</h3>
+                        
+                        <h4 class="heading-quaternary u-text-brown u-margin-left-medium u-padding-bottom-xsmall"><i class="fas fa-chevron-circle-right"></i> Short-term</h4>
+                        <p class="heading-quaternary--sub u-text-brown u-margin-bottom-small">
+                            <i class="fas fa-chevron-right"></i> To implement projects on web design and front-end development to improve the skills which I have learned.
+                            <br>
+                            <i class="fas fa-chevron-right"></i> To learn more about database management, modern web libraries and server administration.
+                        </p>
+                        
+                        <h4 class="heading-quaternary u-text-brown u-margin-left-medium u-padding-bottom-xsmall"><i class="fas fa-chevron-circle-right"></i> Long-term</h4>
+                        <p class="heading-quaternary--sub u-text-brown">
+                            <i class="fas fa-chevron-right"></i> Approach and learn more about the backend and become a full-stack programmer.
+                        </p>
+
+                        <a href="https://drive.google.com/file/d/1qkMPqwQbb9Rbc3lXuUIKKERJbQHL2dq8/view?usp=sharing" class="btn btn--green about__link">download resume</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-skill" id="skill">
+            <div class="u-text-center u-padding-top-large u-margin-bottom-medium">
+                <h2 class="heading-secondary u-text-green">
+                    <i class="fas fa-desktop"></i> 
+                    <span class="heading-secondary--span">my skills</span>
+                </h2>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-2">
+                    <h3 class="heading-tertiary u-text-green u-margin-bottom-small u-padding-left-xsmall u-text-capitalize">Programing skills</h3>
+
+                    <h4 class="heading-quaternary u-text-brown u-text-uppercase u-padding-left-xsmall">html</h4>
+                    <div id="html"></div>
+
+                    <h4 class="heading-quaternary u-text-brown u-text-uppercase u-padding-left-xsmall u-margin-top-medium">css3</h4>
+                    <div id="css3"></div>
+
+                    <h4 class="heading-quaternary u-text-brown u-text-uppercase u-padding-left-xsmall u-margin-top-medium">javascript</h4>
+                    <div id="javascript"></div>
+
+                    <h4 class="heading-quaternary u-text-brown u-text-uppercase u-padding-left-xsmall u-margin-top-medium">sass</h4>
+                    <div id="sass"></div>
+                </div>
+
+                <div class="col-1-of-2 u-margin-left-medium">
+                    <h3 class="heading-tertiary u-text-green u-margin-bottom-small u-text-capitalize u-padding-left-small">Graphics skills</h3>
+                    
+                    <div class="col-1-of-2">
+                        <div class="photoshop u-padding-center-1" data-percentage="60"></div>
+                        <h4 class="heading-quaternary u-text-brown u-text-capitalize u-margin-top-small u-text-center">adobe photoshop</h4>
+                    </div>
+                    
+                    <div class="col-1-of-2">
+                        <div class="illustrator u-padding-center-1" data-percentage="90"></div>
+                        <h4 class="heading-quaternary u-text-brown u-text-capitalize u-margin-top-small u-text-center">adobe illustrator</h4>
+                    </div>
+                    
+                    <div class="col-1-of-2 u-padding-top-small">
+                        <div class="lightroom u-padding-center-1" data-percentage="90"></div>
+                        <h4 class="heading-quaternary u-text-brown u-text-capitalize u-margin-top-small u-text-center">adobe lightroom</h4>
+                    </div>
+
+                    <div class="col-1-of-2 u-padding-top-small">
+                        <div class="premiere u-padding-center-1" data-percentage="80"></div>
+                        <h4 class="heading-quaternary u-text-brown u-text-capitalize u-margin-top-small u-text-center">adobe premiere</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row u-margin-top-small">
+                <div class="col-1-of-5">
+                    <h3 class="heading-tertiary u-text-green u-text-capitalize u-padding-left-xsmall">Language: <span class="heading-quaternary u-text-brown">English</span></h3>
+                </div>
+
+                <div class="col-1-of-5 u-margin-left-medium">
+                    <h4 class="heading-quaternary u-text-brown u-text-capitalize u-text-transform-1 u-text-right">Reading &nbsp;
+                        <i class="fas fa-star u-text-green"></i>
+                        <i class="fas fa-star u-text-green"></i>
+                        <i class="fas fa-star u-text-green"></i>
+                        <i class="fas fa-star u-text-grey"></i>
+                        <i class="fas fa-star u-text-grey"></i>
+                    </h4>
+                </div>
+
+                <div class="col-1-of-5 u-margin-left-small">
+                    <h4 class="heading-quaternary u-text-brown u-text-capitalize u-text-transform-1 u-text-right">Listening &nbsp;
+                        <i class="fas fa-star u-text-green"></i>
+                        <i class="fas fa-star u-text-green"></i>
+                        <i class="fas fa-star u-text-green"></i>
+                        <i class="fas fa-star u-text-grey"></i>
+                        <i class="fas fa-star u-text-grey"></i>
+                    </h4>
+                </div>
+
+                <div class="col-1-of-5 u-margin-left-small">
+                    <h4 class="heading-quaternary u-text-brown u-text-capitalize u-text-transform-1 u-text-right">Writing &nbsp;
+                        <i class="fas fa-star u-text-green"></i>
+                        <i class="fas fa-star u-text-green"></i>
+                        <i class="fas fa-star u-text-grey"></i>
+                        <i class="fas fa-star u-text-grey"></i>
+                        <i class="fas fa-star u-text-grey"></i>
+                    </h4>
+                </div>
+
+                <div class="col-1-of-5 u-margin-left-small">
+                    <h4 class="heading-quaternary u-text-brown u-text-capitalize u-text-transform-1 u-text-right">Speaking &nbsp;
+                        <i class="fas fa-star u-text-green"></i>
+                        <i class="fas fa-star u-text-green"></i>
+                        <i class="fas fa-star u-text-grey"></i>
+                        <i class="fas fa-star u-text-grey"></i>
+                        <i class="fas fa-star u-text-grey"></i>
+                    </h4>
+                </div>
+            </div>
+
+            <div class="row u-margin-top-small u-padding-bottom-large">
+                    <div class="col-1-of-5">
+                        <h3 class="heading-tertiary u-text-green u-text-capitalize u-padding-left-xsmall">Additionally</h3>
+                    </div>
+    
+                    <div class="col-1-of-3 u-margin-left-medium u-padding-left-xsmall">
+                        <h4 class="heading-quaternary u-text-brown u-text-capitalize u-text-transform-1 u-padding-bottom-xsmall"><span class="u-text-green"><i class="fas fa-check-circle"></i></span> &nbsp;Teamwork skill, Presentation skill</h4>
+                        <h4 class="heading-quaternary u-text-brown u-text-capitalize u-text-transform-1"><span class="u-text-green"><i class="fas fa-check-circle"></i></span> &nbsp;Photography skill</h4>
+                    </div>
+    
+                    <div class="col-1-of-2 u-margin-left-medium">
+                        <h4 class="heading-quaternary u-text-brown u-text-capitalize u-text-transform-1 u-padding-bottom-xsmall"><span class="u-text-green"><i class="fas fa-check-circle"></i></span> &nbsp;Enthusiastic, responsible</h4>
+                        <h4 class="heading-quaternary u-text-brown u-text-capitalize u-text-transform-1"><span class="u-text-green"><i class="fas fa-check-circle"></i></span> &nbsp;Good in: Microsoft Office Word, Excel, Power Point...</h4>
+                    </div>
+                </div>
+        </section>
+
+        <section class="section-education" id="education">
+            <div class="row u-padding-bottom-medium">
+                <div class="u-text-center u-padding-top-large u-margin-bottom-big">
+                    <h2 class="heading-secondary-white u-text-white">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span class="heading-secondary--span">education</span>
+                    </h2>
+                </div>
+                    
+                <div id="timeline">
+
+                    <!-- academy of finance -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-university timeline-icon__img"></i>
+                        </div>
+
+                        <!-- academy of finance -->
+                        <div class="timeline-content">
+                            <h2>academy of finance</h2>
+
+                            <div class="timeline__date u-margin-top-small">
+                                <div class="timeline__month timeline__month--left">
+                                    <p>august</p>
+                                </div>
+                                <div class="timeline__month timeline__month--right">
+                                    <p class="u-text-green">august</p>
+                                </div>
+                                
+                                <div class="timeline__year timeline__year--left">
+                                    <p>2013</p>
+                                </div>
+                                <div class="timeline__year--middle">
+                                    <p>-</p>
+                                </div>
+                                <div class="timeline__year timeline__year--right">
+                                    <p class="u-text-green">2017</p>
+                                </div>
+                            </div>
+                            <div class="education__info u-margin-top-small u-padding-bottom-small">
+                                <div class="education__info education__info--title u-padding-left-medium">
+                                    <p>Training level:</p>
+                                    <p>Major:</p>
+                                    <p>Ranking:</p>
+                                </div>
+
+                                <div class="education__info education__info--detail u-padding-left-xsmall">
+                                    <p>Bachelor of Economics</p>
+                                    <p>Financial Corporate</p>
+                                    <p>Good (3.05/4)</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <!-- rio class -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-edit timeline-icon__img"></i>
+                        </div>
+
+                        <!-- rio class -->
+                        <div class="timeline-content right">
+                            <h2>rio class</h2>
+                            
+                            <div class="timeline__date u-margin-top-small">
+                                <div class="timeline__month timeline__month--left">
+                                    <p>july</p>
+                                </div>
+                                <div class="timeline__month timeline__month--right">
+                                    <p class="u-text-green">august</p>
+                                </div>
+                                
+                                <div class="timeline__year timeline__year--left">
+                                    <p>2017</p>
+                                </div>
+                                <div class="timeline__year--middle">
+                                    <p>-</p>
+                                </div>
+                                <div class="timeline__year timeline__year--right">
+                                    <p class="u-text-green">2017</p>
+                                </div>
+                            </div>
+                            <div class="education__info u-margin-top-small u-margin-bottom-small u-text-center">
+                                <div class="education__info">
+                                    <p>Marketing Design Course</p>
+                                </div>
+                                <div class="education__info education__info--title u-padding-left-large">
+                                    <p>Ranking:</p>
+                                </div>
+
+                                <div class="education__info education__info--detail u-padding-left-xsmall">
+                                    <p>Very Good</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- udemy -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-laptop timeline-icon__img" style="transform: translate(30%, 50%) !important;"></i>
+                        </div>
+
+                        <!-- udemy -->
+                        <div class="timeline-content ">
+                            <h2>udemy</h2>
+                            
+                            <div class="timeline__date u-margin-top-small">
+                                <div class="timeline__month timeline__month--left">
+                                    <p>august</p>
+                                </div>
+                                <div class="timeline__month timeline__month--right">
+                                    <p class="u-text-green">february</p>
+                                </div>
+                                
+                                <div class="timeline__year timeline__year--left">
+                                    <p>2017</p>
+                                </div>
+                                <div class="timeline__year--middle">
+                                    <p>-</p>
+                                </div>
+                                <div class="timeline__year timeline__year--right">
+                                    <p class="u-text-green">2018</p>
+                                </div>
+                            </div>
+
+                            <div class="education__info u-padding-bottom-small">
+                                <div class="education__info u-padding-bottom-small">
+                                    <p>Web Developer Courses</p>
+                                </div>
+
+                                <div class="education__info education__info--title u-padding-left-small " style="transform: translateY(-100%);">
+                                    <p>The Web Developer <br> Bootcamp</p>
+                                </div>
+
+                                <div class="education__info education__info--detail u-padding-left-xsmall">
+                                    <p>The Course cover: <br>
+                                        <i style="font-size: 1.5rem">
+                                            HTML5, CSS3, JavaScript, Bootstrap, SemanticUI, DOM Manipulation, jQuery, Unix(Command Line), NPM, NodeJS, MongoDB,...
+                                        </i>
+                                    </p>
+                                    
+                                </div>
+
+                                <hr>
+
+                                <div class="education__info education__info--title u-padding-left-small " style="transform: translateY(-600%);">
+                                    <p>Advanced CSS and Sass Course</p>
+                                </div>
+
+                                <div class="education__info education__info--detail u-padding-left-xsmall">
+                                    <p>The Course cover: <br>
+                                        <i style="font-size: 1.5rem">
+                                            Advanced CSS animations, selectors, pseudo-classes, pseudo-elements; <br>CSS architecture: The 7-1 rule, component-based design, the BEM methodology, writing reusable, maintainable and scalable code; <br>Modern responsive design; <br>Using Sass in real-world projects: setting global variables, building for reusability, architecting CSS and managing media queries;...
+                                        </i>
+                                        
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-experience" id="experience">
+            <div class="row" style="margin-bottom: 0 !important;">
+                <div class="u-text-center u-padding-top-large u-margin-bottom-big">
+                    <h2 class="heading-secondary u-text-green">
+                        <i class="fas fa-briefcase"></i>
+                        <span class="heading-secondary--span">work experience</span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Vietnamese Students’ Association Of Academy Of Finance & HoChiMinh Communist Youth Union Of Academy Of Finance -->
+            <div class="row experience">
+                <div class="col-1-of-2 u-margin-right-medium">
+                    <div class="experience__container">
+                        <div class="experience__date">
+                            <div class="experience__month experience__month--left">
+                                <p>october</p>
+                            </div>
+                            <div class="experience__month experience__month--right">
+                                <p class="u-text-green">June</p>
+                            </div>
+                        
+                            <div class="experience__year experience__year--left">
+                                <p>2013</p>
+                            </div>
+                            <div class="experience__year--middle">
+                                <p>-</p>
+                            </div>
+                            <div class="experience__year experience__year--right">
+                                <p class="u-text-green">2015</p>
+                            </div>
+
+                            <hr class="experience__date--hr" style="margin-top: 3px;">
+                        </div>
+                    </div>
+                    
+                    <div class="experience__logo u-margin-top-small">
+                        <img src="img/exp_img-3.png" alt="#" class="experience__logo--img u-padding-left-xsmall">
+                        <img src="img/exp_img-2.png" alt="#" class="experience__logo--img u-padding-left-xsmall">
+                        <img src="img/exp_img-1.png" alt="#" class="experience__logo--img">
+                    </div>
+                </div>
+                
+                <div class="col-1-of-2">
+                    <div class="experience__title u-margin-left-small u-padding-bottom-xsmall">
+                        <h3 class="heading-tertiary u-text-green u-text-capitalize">Vietnamese Students’ Association of<br>Academy of Finance &<br>HoChiMinh Communist Youth Union of<br>Academy of Finance</h3>
+                    </div>
+
+                    <div class="experience__position u-margin-left-small u-padding-bottom-xsmall">
+                        <h4 class="heading-quaternary u-text-brown">Deputy Head of Communica on and Technical Committee
+                        </h4>
+                        <hr class="experience__position--hr" style="margin-top: 3px;">
+                    </div>
+
+                    <div class="experience__location u-margin-left-small">
+                        <h5 class="heading-quinary u-text-brown"><i class="fas fa-map-marker-alt"></i> &nbsp; Bac Tu Liem district, Hanoi, Vietnam</h5>
+                    </div>
+                </div>
+
+                <hr class="experience__hr u-margin-top-xsmall">
+            </div>
+
+            <!-- VNDIRECT Securities Corporation -->
+            <div class="row experience">
+                <div class="col-1-of-2 u-margin-right-medium">
+                    <div class="experience__container">
+                        <div class="experience__date">
+                            <div class="experience__month experience__month--left">
+                                <p>march</p>
+                            </div>
+                            <div class="experience__month experience__month--right">
+                                <p class="u-text-green">june</p>
+                            </div>
+                        
+                            <div class="experience__year experience__year--left">
+                                <p>2016</p>
+                            </div>
+                            <div class="experience__year--middle">
+                                <p>-</p>
+                            </div>
+                            <div class="experience__year experience__year--right">
+                                <p class="u-text-green">2016</p>
+                            </div>
+
+                            <hr class="experience__date--hr" style="margin-top: 3px;">
+                        </div>
+                    </div>
+                    
+                    <div class="experience__logo u-margin-top-small">
+                        <img src="img/exp_img-5.png" alt="#" class="experience__logo--img" style="height: 5.5rem;">
+                    </div>
+                </div>
+                
+                <div class="col-1-of-2">
+                    <div class="experience__title u-margin-left-small u-padding-bottom-xsmall">
+                        <h3 class="heading-tertiary u-text-green u-text-capitalize">VNDIRECT Securities Corporation</h3>
+                    </div>
+
+                    <div class="experience__position u-margin-left-small u-padding-bottom-xsmall">
+                        <h4 class="heading-quaternary u-text-brown">Design Freelance</h4>
+                        <hr class="experience__position--hr" style="margin-top: 3px;">
+                    </div>
+
+                    <div class="experience__location u-margin-left-small">
+                        <h5 class="heading-quinary u-text-brown"><i class="fas fa-map-marker-alt"></i> &nbsp; Nguyen Thuong Hien street, Hai Ba Trung district, Hanoi, Vietnam</h5>
+                    </div>
+                </div>
+
+                <hr class="experience__hr u-margin-top-xsmall">
+            </div>
+
+            <!-- FELIX English Center -->
+            <div class="row experience">
+                <div class="col-1-of-2 u-margin-right-medium">
+                    <div class="experience__container">
+                        <div class="experience__date">
+                            <div class="experience__month experience__month--left">
+                                <p>august</p>
+                            </div>
+                            <div class="experience__month experience__month--right">
+                                <p class="u-text-green">december</p>
+                            </div>
+                        
+                            <div class="experience__year experience__year--left">
+                                <p>2016</p>
+                            </div>
+                            <div class="experience__year--middle">
+                                <p>-</p>
+                            </div>
+                            <div class="experience__year experience__year--right">
+                                <p class="u-text-green">2017</p>
+                            </div>
+
+                            <hr class="experience__date--hr" style="margin-top: 3px;">
+                        </div>
+                    </div>
+                    
+                    <div class="experience__logo u-margin-top-small">
+                        <img src="img/exp_img-6.png" alt="#" class="experience__logo--img">
+                    </div>
+                </div>
+                
+                <div class="col-1-of-2">
+                    <div class="experience__title u-margin-left-small u-padding-bottom-xsmall">
+                        <h3 class="heading-tertiary u-text-green u-text-capitalize">FELIX English Center</h3>
+                    </div>
+
+                    <div class="experience__position u-margin-left-small u-padding-bottom-xsmall">
+                        <h4 class="heading-quaternary u-text-brown">Desinger & Cameraman</h4>
+                        <hr class="experience__position--hr" style="margin-top: 3px;">
+                    </div>
+
+                    <div class="experience__location u-margin-left-small">
+                        <h5 class="heading-quinary u-text-brown"><i class="fas fa-map-marker-alt"></i> &nbsp; Nguyen Khanh Toan street, Cau Giay district, Hanoi, Vietnam</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-contact" id="contact">
+            <div class="contact__container">
+                <div class="contact__info">
+                    <div class="contact__info--text-box">
+                        <h3 class="contact__info--text-heading u-text-green u-text-capitalize">Address</h3>
+
+                        <h4 class="contact__info--text-title u-text-brown u-margin-top-medium">Phone number:</h4>
+                        <h4 class="contact__info--text-detail u-text-brown">(+84) 88 694 89 87</h4>
+
+                        <h4 class="contact__info--text-title u-text-brown u-margin-top-medium">Email address:</h4>
+                        <h4 class="contact__info--text-detail u-text-brown">truyenho.webdev@gmail.com</h4>
+
+                        <h4 class="contact__info--text-title u-text-brown u-margin-top-medium">Home address:</h4>
+                        <h4 class="contact__info--text-detail u-text-brown">CT12B, Kim Van Kim Lu buiding, Hoang Mai district, Hanoi, Vietnam
+                        </h4>
+                    </div>
+
+                    <div class="contact__info--social u-margin-top-medium">
+                        <a href="https://www.facebook.com/ho.justin.95" class="contact__info--social-icon"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://www.instagram.com/justingumiho/" class="contact__info--social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.flickr.com/photos/95525356@N03/" class="contact__info--social-icon"><i class="fab fa-flickr"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact__map">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
