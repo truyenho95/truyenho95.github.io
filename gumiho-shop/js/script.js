@@ -168,7 +168,7 @@ $(document).ready(function(){
   });
 
   // Dynamic Function
-  var dynamicFunc = () => {
+  const dynamicFunc = () => {
     // INDEX-Page  Dynamic Width = Line-Height
     var div__headerCartProductRemoveBtn = $('.header__cart--product-remove--btn');
     var width__div__headerCartProductRemoveBtn = div__headerCartProductRemoveBtn.width();
@@ -204,5 +204,6 @@ $(document).ready(function(){
       $(this).addClass("d-none");
     });
     displayAll();
+    dynamicFunc();
   };
 });
