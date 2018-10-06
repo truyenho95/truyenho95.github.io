@@ -14,15 +14,22 @@
   <title>Gumiho Shop - Mỹ phẩm xách tay Đài Loan</title>
 
   <!-- Libraries CSS -->
-  <link rel="stylesheet" href="sass/vendors/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="sass/vendors/bootstrap.min.css">
   <link rel="stylesheet" href="sass/vendors/fontawesome-all.min.css">
   <link rel="stylesheet" href="sass/vendors/fa-svg-with-js.css">
   <link rel="stylesheet" href="sass/vendors/owl.carousel.css">
-  <link rel="stylesheet" href="sass/vendors/owl.theme.default.css">
+  <link rel="stylesheet" href="sass/vendors/owl.theme.default.css"> -->
   <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
+  <div class="preload">
+    <div class="preload__img">
+      <img src="img/icon/load.gif" alt="">
+    </div>
+  </div>
+  <!-- /.preload -->
+
   <header>
     <div class="header__top">
       <div class="container">
@@ -48,39 +55,89 @@
     <div class="header__middle">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-3 header__logo">
+          <div class="col-sm-12 col-md-3 header__logo">
             <img src="img/logo/gumiho-shop-logo.png" alt="" class="img-responsive">
           </div>
           <!-- /.header__logo -->
-          <div class="col-12 col-md-6 header__search">
+          <div class="col-sm-12 col-md-6 header__search">
             <form class="form-inline">
               <div class="form-group">
                 <input type="text" name="search" id="search" class="form-control" placeholder="Tìm kiếm" aria-describedby="helpId">
-                <img src="img/icon/search.svg" alt="">
+                <button type="submit">
+                  <img src="img/icon/search.svg" alt="">
+                </button>
               </div>
               <!-- /.form-group -->
             </form>
             <!-- /.form-inline -->
           </div>
           <!-- /.header__search -->
-          <div class="col-12 col-md-6 user__control">
-            <div class="account">
-              <div class="account__icon">
-                <img src="img/icon/user.svg" alt="">
+          <div class="col-sm-12 col-md-3 user__control">
+            <div class="header__account">
+              <a class="header__account--link" href="login.html">
+                <div class="header__account--icon">
+                  <img src="img/icon/user.svg" alt="">
+                </div>
+                <!-- /.header__account--icon -->
+                <p>tài khoản</p>
+              </a>
+              <!-- /.header__account--link -->
+
+              <div class="header__account--block-hover">
+                <ul>
+                  <li><a href="login.html" target="__blank">Đăng nhập</a></li>
+                  <li><a href="register.html" target="__blank">Đăng ký</a></li>
+                </ul>
               </div>
-              <!-- /.account__icon -->
-              <p>tài khoản</p>
+              <!-- /.header__account--block-hover -->
             </div>
-            <!-- /.account -->
-            <div class="cart">
-              <div class="cart__icon">
-                <img src="img/icon/shopping-cart.svg" alt="">
-                <div class="number-cart">2</div>
+            <!-- /.header__account -->
+
+            <div class="header__cart">
+              <a class="header__cart--link" href="" title="Xem giỏ hàng của tôi">
+                <div class="header__cart--icon">
+                  <img src="img/icon/shopping-cart.svg" alt="">
+                  <div class="number-cart">2</div>
+                </div>
+                <!-- /.header__cart--icon -->
+                <p>giỏ hàng</p>
+              </a>
+              <!-- /.header__cart--link -->
+
+              <div class="header__cart--block-hover">
+                <div class="header__cart--product-item">
+                  <div class="row">
+                    <div class="col-3 header__cart--product-img">
+                      <img src="img/products/beautydiary/product-1.png" alt="">
+                    </div>
+                    <!-- /.header__cart--product-img -->
+                    <div class="col-8 header__cart--product-info">
+                      <h5>
+                        <span class="header__cart--product-quantity">(1)</span>
+                        Serum Trị Mụn, Trị Thâm Naruko: Tea Tree Post Blemish Corrector 10ml
+                      </h5>
+                      <p class="header__cart--product-cost">210.000VND</p>
+                    </div>
+                    <!-- /.header__cart--product-info -->
+                    <div class="col-1 header__cart--product-remove">
+                      <button type="submit" class="header__cart--product-remove--btn">x</button>
+                    </div>
+                    <!-- /.header__cart--product-remove -->
+                  </div>
+                </div>
+                <!-- /.header__cart--product-item -->
+                <hr>
+
+                <p class="subtotal">Thành tiền: <span>210.000VND</span></p>
+                <p class="shipping">Phí vận chuyển: <span>20.000VND</span></p>
+                <hr>
+                <p class="total">Tổng tiền <span>230.000VND</span></p>
+                <hr>
+                <a href="cart.html" class="btn header__cart--btn">Xem giỏ hàng</a>
               </div>
-              <!-- /.cart__icon -->
-              <p>giỏ hàng</p>
+              <!-- /.header__cart--block-hover -->
             </div>
-            <!-- /.cart -->
+            <!-- /.header__cart--->
           </div>
           <!-- /.user__control -->
         </div>
@@ -91,114 +148,116 @@
     <!-- /.header__middle -->
 
     <div class="header__bottom">
-      <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-            aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">trang chủ <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown-product" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">sản phẩm</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown-product">
-                <a class="dropdown-item" href="#">Action 1</a>
-                <a class="dropdown-item" href="#">Action 2</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown-newProduct" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">hàng mới về</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown-newProduct">
-                <a class="dropdown-item" href="#">Action 1</a>
-                <a class="dropdown-item" href="#">Action 2</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown-tips" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">beauty tips/review</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown-tips">
-                <a class="dropdown-item" href="#">Action 1</a>
-                <a class="dropdown-item" href="#">Action 2</a>
-              </div>
-            </li>
-          </ul>
+      <div class="container">
+        <div class="row">
+          <nav class="navbar navbar-expand-sm navbar-light">
+            <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">trang chủ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdown-product" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">sản phẩm</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown-product">
+                    <a class="dropdown-item dropright" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Action 1
+                      <div class="dropdown-menu">
+                        asdhaushdiu
+                      </div>
+
+                    </a>
+                    <a class="dropdown-item" href="#">Action 2</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">hàng mới về</a>
+
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdown-tips" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">beauty tips/review</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown-tips">
+                    <a class="dropdown-item" href="#">Action 1</a>
+                    <a class="dropdown-item" href="#">Action 2</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- /.collapse -->
+          </nav>
         </div>
-        <!-- /.collapse -->
-      </nav>
+      </div>
     </div>
     <!-- /.header__bottom -->
   </header>
 
-  <main>
-    <div class="banner">
+  <main class="home">
+    <div class="home__banner">
       <div class="container">
-        <div id="carouselId" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselId" data-slide-to="1"></li>
-            <li data-target="#carouselId" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
+        <div class="banner-carousel owl-carousel owl-theme">
+            <div class="item">
               <img src="img/pages/home/banner/banner-1.jpg" alt="First slide">
             </div>
-            <div class="carousel-item">
+            <div class="item">
               <img src="img/pages/home/banner/banner-2.jpg" alt="Second slide">
             </div>
-            <div class="carousel-item">
+            <div class="item">
               <img src="img/pages/home/banner/banner-3.jpg" alt="Third slide">
             </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
+        <!-- /.banner-carousel -->
+        <div class="carousel-controller">
+          <div class="prev"><i class="fas fa-caret-left"></i></div>
+          <div class="next"><i class="fas fa-caret-right"></i></div>
+        </div>
+        <!-- /.carousel-controller -->
       </div>
     </div>
     <!-- /.banner -->
 
-    <div class="catalog">
-      <div class="col-12 col-md-4 mask">
-        <div class="card">
-          <img class="card-img-top" src="img/pages/home/catalog/body.jpg" alt="">
-          <div class="card-body">
-            <h2 class="card-title">masks</h2>
+    <div class="home__catalog">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-4 mask">
+            <div class="card">
+              <img class="card-img-top" src="img/pages/home/catalog/body.jpg" alt="">
+              <div class="card-body">
+                <h2 class="card-title">masks</h2>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <!-- /.mask -->
+          <!-- /.mask -->
 
-      <div class="col-12 col-md-4 skin-care">
-        <div class="card">
-          <img class="card-img-top" src="img/pages/home/catalog/mask.jpg" alt="">
-          <div class="card-body">
-            <h2 class="card-title">skin-care</h2>
+          <div class="col-sm-12 col-md-4 skin-care">
+            <div class="card">
+              <img class="card-img-top" src="img/pages/home/catalog/mask.jpg" alt="">
+              <div class="card-body">
+                <h2 class="card-title">skin-care</h2>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <!-- /.skin-care -->
+          <!-- /.skin-care -->
 
-      <div class="col-12 col-md-4 body">
-        <div class="card">
-          <img class="card-img-top" src="img/pages/home/catalog/skin-care.jpg" alt="">
-          <div class="card-body">
-            <h2 class="card-title">body</h2>
+          <div class="col-sm-12 col-md-4 body">
+            <div class="card">
+              <img class="card-img-top" src="img/pages/home/catalog/skin-care.jpg" alt="">
+              <div class="card-body">
+                <h2 class="card-title">body</h2>
+              </div>
+            </div>
           </div>
+          <!-- /.body -->
         </div>
       </div>
-      <!-- /.body -->
     </div>
     <!-- /.catalog -->
 
-    <div class="products">
-      <div class="product__header">
-        <div class="container">
+    <div class="home__products">
+      <div class="container">
+        <div class="product__header">
           <div class="header__title">
             <h3>sản phẩm</h3>
           </div>
@@ -206,28 +265,28 @@
 
           <div class="tab__title">
             <ul>
-              <li><a href="">Phổ biến</a></li>
+              <li><a href="" class="active">Phổ biến</a></li>
               <li><a href="">Mới về</a></li>
               <li><a href="">Giảm giá</a></li>
             </ul>
           </div>
           <!-- /.tab__title -->
 
-          <div class="slide-control">
+          <div class="slide-control-products">
 
           </div>
           <!-- /.slide-control -->
         </div>
+        <!-- /.product__header -->
       </div>
-      <!-- /.product__header -->
 
       <div class="product__carousel">
         <div class="container">
-          <div class="owl-carousel owl-theme">
+          <div class="product-carousel owl-carousel owl-theme">
             <div class="item">
               <div class="card mb-2">
                 <div class="product__img">
-                  <a href="">
+                  <a href="detail.html" target="__blank">
                     <img class="card-img-top" src="img/products/naruko/product-1.jpg" alt="Ảnh sản phẩm">
                   </a>
 
@@ -241,7 +300,7 @@
                     </div>
 
                     <div class="product__img--action-detail">
-                      <a href="">
+                      <a href="detail.html" target="__blank">
                         <span>
                           <i class="fas fa-list"></i>
                         </span> chi tiết</a>
@@ -250,13 +309,20 @@
                   </div>
                   <!-- /.product__img--action -->
 
+                  <div class="product__img--sale">
+                    <p>
+                      sale<br><span>50%</span>
+                    </p>
+                  </div>
+                  <!-- /.product__img--sale -->
+
                 </div>
                 <!-- /.product__img -->
 
                 <div class="product__img--details">
                   <div class="card-body">
                     <h4>
-                      <a href="" class="card-title">Mặt nạ tràm trà kiểm soát dầu và mụn hộp 8 miếng </a>
+                      <a href="detail.html" target="__blank" class="card-title">Mặt nạ tràm trà kiểm soát dầu và mụn hộp 8 miếng </a>
                     </h4>
                     <p class="card-text">
                       <span>125.000đ</span> 150.000đ</p>
@@ -268,17 +334,6 @@
             </div>
             <!-- /.item -->
 
-            <div class="item"><h4>2</h4></div>
-            <div class="item"><h4>3</h4></div>
-            <div class="item"><h4>4</h4></div>
-            <div class="item"><h4>5</h4></div>
-            <div class="item"><h4>6</h4></div>
-            <div class="item"><h4>7</h4></div>
-            <div class="item"><h4>8</h4></div>
-            <div class="item"><h4>9</h4></div>
-            <div class="item"><h4>10</h4></div>
-            <div class="item"><h4>11</h4></div>
-            <div class="item"><h4>12</h4></div>
           </div>
           <!-- /.owl-carousel -->
         </div>
@@ -291,29 +346,47 @@
     <div class="banner-blog">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-6 banner-blog__block">
-            <img src="img/pages/home/banner-blog/banner-blog-1.jpg" alt="">
-            <div class="banner-blog__text-box">
-              <h3>makeup routine</h3>
-              <hr>
-              <p>
-                Hướng dẫn các bước Makeup cơ bản. Nhìn qua để xem bạn đã thực hiện đúng chưa nha!
-              </p>
-            </div>
-            <!-- /.banner-blog__text-box -->
+          <div class="col-sm-12 col-md-6 banner-blog__block">
+            <a href="">
+              <div class="banner-blog__img">
+                <img src="img/pages/home/banner-blog/banner-blog-1.jpg" alt="">
+              </div>
+              <!-- /.banner-blog__img -->
+
+              <div class="banner-blog__text-box">
+                <div class="banner-blog__content">
+                  <h3>makeup routine</h3>
+                  <hr>
+                  <p>
+                    Hướng dẫn các bước Makeup cơ bản. Nhìn qua để xem bạn đã thực hiện đúng chưa nha!
+                  </p>
+                </div>
+                <!-- /.banner-blog__content -->
+              </div>
+              <!-- /.banner-blog__text-box -->
+            </a>
           </div>
           <!-- /.banner-blog__block -->
 
-          <div class="col-12 col-md-6 banner-blog__block">
-            <img src="img/pages/home/banner-blog/banner-blog-2.jpg" alt="">
-            <div class="banner-blog__text-box">
-              <h3>skincare routine</h3>
-              <hr>
-              <p>
-                Routine Cơ Bản cho chính mình là điều không hề đơn giản. Để Routine đó hoạt động, đưa làn da mình khá hơn lại càng không đơn giản. Cùng check qua nhé!
-              </p>
-            </div>
-            <!-- /.banner-blog__text-box -->
+          <div class="col-sm-12 col-md-6 banner-blog__block">
+            <a href="">
+              <div class="banner-blog__img">
+                <img src="img/pages/home/banner-blog/banner-blog-2.jpg" alt="">
+              </div>
+              <!-- /.banner-blog__img -->
+
+              <div class="banner-blog__text-box">
+                <div class="banner-blog__content">
+                  <h3>skincare routine</h3>
+                  <hr>
+                  <p>
+                    Routine Cơ Bản cho chính mình là điều không hề đơn giản. Để Routine đó hoạt động, đưa làn da mình khá hơn lại càng không đơn giản. Cùng check qua nhé!
+                  </p>
+                </div>
+                <!-- /.banner-blog__content -->
+              </div>
+              <!-- /.banner-blog__text-box -->
+            </a>
           </div>
           <!-- /.banner-blog__block -->
         </div>
@@ -322,8 +395,8 @@
     <!-- /.banner-blog -->
 
     <div class="products-catalog">
-      <div class="product__header">
-        <div class="container">
+      <div class="container">
+        <div class="product__header">
           <div class="header__title">
             <h3>danh mục</h3>
           </div>
@@ -331,7 +404,7 @@
 
           <div class="tab__title">
             <ul>
-              <li><a href="">Mặt nạ</a></li>
+              <li><a href="" class="active">Mặt nạ</a></li>
               <li><a href="">Sữa rửa mặt</a></li>
               <li><a href="">Kem dưỡng da</a></li>
               <li><a href="">Toner</a></li>
@@ -340,21 +413,21 @@
           </div>
           <!-- /.tab__title -->
 
-          <div class="slide-control">
+          <div class="slide-control-catalog">
 
           </div>
           <!-- /.slide-control -->
         </div>
+        <!-- /.product__header -->
       </div>
-      <!-- /.product__header -->
 
       <div class="product__carousel">
         <div class="container">
-          <div class="owl-carousel owl-theme">
+          <div class="catalog-carousel owl-carousel owl-theme">
             <div class="item">
               <div class="card mb-2">
                 <div class="product__img">
-                  <a href="">
+                  <a href="detail.html" target="__blank">
                     <img class="card-img-top" src="img/products/naruko/product-1.jpg" alt="Ảnh sản phẩm">
                   </a>
 
@@ -368,7 +441,7 @@
                     </div>
 
                     <div class="product__img--action-detail">
-                      <a href="">
+                      <a href="detail.html" target="__blank">
                         <span>
                           <i class="fas fa-list"></i>
                         </span> chi tiết</a>
@@ -377,13 +450,20 @@
                   </div>
                   <!-- /.product__img--action -->
 
+                  <div class="product__img--sale">
+                    <p>
+                      sale<br><span>50%</span>
+                    </p>
+                  </div>
+                  <!-- /.product__img--sale -->
+
                 </div>
                 <!-- /.product__img -->
 
                 <div class="product__img--details">
                   <div class="card-body">
                     <h4>
-                      <a href="" class="card-title">Mặt nạ tràm trà kiểm soát dầu và mụn hộp 8 miếng </a>
+                      <a href="detail.html" target="__blank" class="card-title">Mặt nạ tràm trà kiểm soát dầu và mụn hộp 8 miếng </a>
                     </h4>
                     <p class="card-text">
                       <span>125.000đ</span> 150.000đ</p>
@@ -395,17 +475,6 @@
             </div>
             <!-- /.item -->
 
-            <div class="item"><h4>2</h4></div>
-            <div class="item"><h4>3</h4></div>
-            <div class="item"><h4>4</h4></div>
-            <div class="item"><h4>5</h4></div>
-            <div class="item"><h4>6</h4></div>
-            <div class="item"><h4>7</h4></div>
-            <div class="item"><h4>8</h4></div>
-            <div class="item"><h4>9</h4></div>
-            <div class="item"><h4>10</h4></div>
-            <div class="item"><h4>11</h4></div>
-            <div class="item"><h4>12</h4></div>
           </div>
           <!-- /.owl-carousel -->
         </div>
@@ -416,24 +485,24 @@
     <!-- /.products-catalog -->
 
     <div class="blog">
-      <div class="blog__header">
-        <div class="container">
+      <div class="container">
+        <div class="blog__header">
           <div class="header__title">
             <h3>tin tức | góc làm đẹp</h3>
           </div>
           <!-- /.header__title -->
 
-          <div class="slide-control">
+          <div class="slide-control-blog">
 
           </div>
           <!-- /.slide-control -->
         </div>
+        <!-- /.blog__header -->
       </div>
-      <!-- /.blog__header -->
 
       <div class="blog__carousel">
         <div class="container">
-          <div class="owl-carousel owl-theme">
+          <div class="blog-carousel owl-carousel owl-theme">
             <div class="item">
                 <div class="blog__img">
                   <img src="img/pages/home/blog/blog-1.jpg" alt="">
@@ -448,7 +517,7 @@
                       </div>
                       <!-- /.title-time -->
                       <div class="col-9 title-name">
-                        <h4>Sản phẩm trị mụn Naruko</h4>
+                        <h4>4 Mẹo Trang Điểm Thu Nhỏ Lỗ Chân Lông Hoàn Hảo!</h4>
                         <p>Đăng bởi <span>Gumiho</span> / 0 comment </p>
                       </div>
                     </div>
@@ -466,17 +535,133 @@
             </div>
             <!-- /.item -->
 
-            <div class="item"><h4>2</h4></div>
-            <div class="item"><h4>3</h4></div>
-            <div class="item"><h4>4</h4></div>
-            <div class="item"><h4>5</h4></div>
-            <div class="item"><h4>6</h4></div>
-            <div class="item"><h4>7</h4></div>
-            <div class="item"><h4>8</h4></div>
-            <div class="item"><h4>9</h4></div>
-            <div class="item"><h4>10</h4></div>
-            <div class="item"><h4>11</h4></div>
-            <div class="item"><h4>12</h4></div>
+            <div class="item">
+                <div class="blog__img">
+                  <img src="img/pages/home/blog/blog-1.jpg" alt="">
+                </div>
+                <!-- /.blog__img -->
+
+                <div class="blog__detail">
+                  <div class="blog__title">
+                    <div class="row">
+                      <div class="col-3 title-time">
+                        <p><span>09</span><br>sep</p>
+                      </div>
+                      <!-- /.title-time -->
+                      <div class="col-9 title-name">
+                        <h4>4 Mẹo Trang Điểm Thu Nhỏ Lỗ Chân Lông Hoàn Hảo!</h4>
+                        <p>Đăng bởi <span>Gumiho</span> / 0 comment </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.blog__title -->
+
+                  <div class="blog__content">
+                    <p>
+                      Sản phẩm trị mụn: Hiện nay, trên thị trường có rất nhiều thương hiệu chuyên dành để trị mụn. Naruko luôn nằm trong sự lựa chọn hàng đầu của khách hàng bởi hiệu quả của chính sản phẩm.
+                    </p>
+                  </div>
+                  <!-- /.blog__content -->
+                </div>
+                <!-- /.blog__detail -->
+            </div>
+            <!-- /.item -->
+
+            <div class="item">
+                <div class="blog__img">
+                  <img src="img/pages/home/blog/blog-1.jpg" alt="">
+                </div>
+                <!-- /.blog__img -->
+
+                <div class="blog__detail">
+                  <div class="blog__title">
+                    <div class="row">
+                      <div class="col-3 title-time">
+                        <p><span>09</span><br>sep</p>
+                      </div>
+                      <!-- /.title-time -->
+                      <div class="col-9 title-name">
+                        <h4>4 Mẹo Trang Điểm Thu Nhỏ Lỗ Chân Lông Hoàn Hảo!</h4>
+                        <p>Đăng bởi <span>Gumiho</span> / 0 comment </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.blog__title -->
+
+                  <div class="blog__content">
+                    <p>
+                      Sản phẩm trị mụn: Hiện nay, trên thị trường có rất nhiều thương hiệu chuyên dành để trị mụn. Naruko luôn nằm trong sự lựa chọn hàng đầu của khách hàng bởi hiệu quả của chính sản phẩm.
+                    </p>
+                  </div>
+                  <!-- /.blog__content -->
+                </div>
+                <!-- /.blog__detail -->
+            </div>
+            <!-- /.item -->
+
+            <div class="item">
+                <div class="blog__img">
+                  <img src="img/pages/home/blog/blog-1.jpg" alt="">
+                </div>
+                <!-- /.blog__img -->
+
+                <div class="blog__detail">
+                  <div class="blog__title">
+                    <div class="row">
+                      <div class="col-3 title-time">
+                        <p><span>09</span><br>sep</p>
+                      </div>
+                      <!-- /.title-time -->
+                      <div class="col-9 title-name">
+                        <h4>4 Mẹo Trang Điểm Thu Nhỏ Lỗ Chân Lông Hoàn Hảo!</h4>
+                        <p>Đăng bởi <span>Gumiho</span> / 0 comment </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.blog__title -->
+
+                  <div class="blog__content">
+                    <p>
+                      Sản phẩm trị mụn: Hiện nay, trên thị trường có rất nhiều thương hiệu chuyên dành để trị mụn. Naruko luôn nằm trong sự lựa chọn hàng đầu của khách hàng bởi hiệu quả của chính sản phẩm.
+                    </p>
+                  </div>
+                  <!-- /.blog__content -->
+                </div>
+                <!-- /.blog__detail -->
+            </div>
+            <!-- /.item -->
+
+            <div class="item">
+                <div class="blog__img">
+                  <img src="img/pages/home/blog/blog-1.jpg" alt="">
+                </div>
+                <!-- /.blog__img -->
+
+                <div class="blog__detail">
+                  <div class="blog__title">
+                    <div class="row">
+                      <div class="col-3 title-time">
+                        <p><span>09</span><br>sep</p>
+                      </div>
+                      <!-- /.title-time -->
+                      <div class="col-9 title-name">
+                        <h4>4 Mẹo Trang Điểm Thu Nhỏ Lỗ Chân Lông Hoàn Hảo!</h4>
+                        <p>Đăng bởi <span>Gumiho</span> / 0 comment </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.blog__title -->
+
+                  <div class="blog__content">
+                    <p>
+                      Sản phẩm trị mụn: Hiện nay, trên thị trường có rất nhiều thương hiệu chuyên dành để trị mụn. Naruko luôn nằm trong sự lựa chọn hàng đầu của khách hàng bởi hiệu quả của chính sản phẩm.
+                    </p>
+                  </div>
+                  <!-- /.blog__content -->
+                </div>
+                <!-- /.blog__detail -->
+            </div>
+            <!-- /.item -->
           </div>
           <!-- /.blog-owl-carousel -->
         </div>
@@ -488,60 +673,69 @@
 
     <div class="support">
       <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-4 support-item">
-            <div class="row">
-              <div class="col-3 item-icon">
-                <i class="fas fa-truck fa-flip-horizontal"></i>
+        <div class="support__block">
+          <div class="row">
+            <div class="col-sm-12 col-md-4 support-item">
+              <div class="row">
+                <div class="col-3 item-icon">
+                  <div>
+                    <span><i class="fas fa-truck fa-flip-horizontal"></i></span>
+                  </div>
+                </div>
+                <!-- /.item-icon -->
+                <div class="col-9 item-content">
+                  <h3>chính sách vận chuyển</h3>
+                  <p>
+                    Miễn phí vận chuyển khi đặt qua Shoppee<br>
+                    Miễn phí vận chuyển với đơn hàng trên 500.000đ
+                  </p>
+                </div>
+                <!-- /.item-content -->
               </div>
-              <!-- /.item-icon -->
-              <div class="col-9 item-content">
-                <h3>chính sách vận chuyển</h3>
-                <p>
-                  Miễn phí vận chuyển khi đặt qua Shoppee<br>
-                  Miễn phí vận chuyển với đơn hàng trên 500.000đ
-                </p>
-              </div>
-              <!-- /.item-content -->
             </div>
-          </div>
-          <!-- /.support-item -->
+            <!-- /.support-item -->
 
-          <div class="col-12 col-md-4 support-item">
-            <div class="row">
-              <div class="col-3 item-icon">
-                <i class="fas fa-hand-holding-usd"></i>
+            <div class="col-sm-12 col-md-4 support-item">
+              <div class="row">
+                <div class="col-3 item-icon">
+                  <div>
+                    <span><i class="fas fa-hand-holding-usd"></i></span>
+                  </div>
+                </div>
+                <!-- /.item-icon -->
+                <div class="col-9 item-content">
+                  <h3>chính sách tích điểm</h3>
+                  <p>
+                    Tích lũy 1 điểm/1.000đ<br>
+                    Khách hàng có thể trừ điểm tích lũy vào đơn hàng
+                  </p>
+                </div>
+                <!-- /.item-content -->
               </div>
-              <!-- /.item-icon -->
-              <div class="col-9 item-content">
-                <h3>chính sách tích điểm</h3>
-                <p>
-                  Tích lũy 1 điểm/1.000đ<br>
-                  Khách hàng có thể trừ điểm tích lũy vào đơn hàng
-                </p>
-              </div>
-              <!-- /.item-content -->
             </div>
-          </div>
-          <!-- /.support-item -->
+            <!-- /.support-item -->
 
-          <div class="col-12 col-md-4 support-item">
-            <div class="row">
-              <div class="col-3 item-icon">
-                <i class="fas fa-reply-all"></i>
+            <div class="col-sm-12 col-md-4 support-item">
+              <div class="row">
+                <div class="col-3 item-icon">
+                  <div>
+                    <span><i class="fas fa-reply-all"></i></spa>
+                  </div>
+                </div>
+                <!-- /.item-icon -->
+                <div class="col-9 item-content">
+                  <h3>chính sách đổi trả</h3>
+                  <p>
+                    Chỉ áp dụng đổi trả với khách hàng tích lũy Bạc trở lên.
+                  </p>
+                </div>
+                <!-- /.item-content -->
               </div>
-              <!-- /.item-icon -->
-              <div class="col-9 item-content">
-                <h3>chính sách đổi trả</h3>
-                <p>
-                  Chỉ áp dụng đổi trả với khách hàng tích lũy Bạc trở lên.
-                </p>
-              </div>
-              <!-- /.item-content -->
             </div>
+            <!-- /.support-item -->
           </div>
-          <!-- /.support-item -->
         </div>
+        <!-- /.support__block -->
       </div>
     </div>
     <!-- /.support -->
@@ -558,7 +752,7 @@
     <div class="footer__top">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-4 contact-block">
+          <div class="col-sm-12 col-md-4 contact-block">
             <div class="title">
               <h2>gumiho shop</h2>
             </div>
@@ -567,7 +761,7 @@
             <div class="detail">
               <div class="detail-item">
                 <p>
-                  <span><i class="fas fa-map-marker-alt"></i></span> Địa chỉ: Tòa CT7A, Khu đô thị The Spark, Đường Lê Văn Lương, Hà Nội.
+                  <span><i class="fas fa-map-marker-alt"></i></span> Địa chỉ: Tòa CT7A, khu đô thị The Spark, đường Tố Hữu, Hà Nội.
                 </p>
               </div>
               <!-- /.detail-item -->
@@ -597,7 +791,7 @@
           </div>
           <!-- /.contact-block -->
 
-          <div class="col-12 col-md-2 info-block">
+          <div class="col-sm-12 col-md-2 info-block">
             <div class="title">
               <h2>thông tin</h2>
             </div>
@@ -614,7 +808,7 @@
           </div>
           <!-- /.info-block -->
 
-          <div class="col-12 col-md-3 insta-block">
+          <div class="col-sm-12 col-md-3 insta-block">
             <div class="title">
               <h2>instagram</h2>
               <a href="">@Follow us</a>
@@ -628,7 +822,7 @@
           </div>
           <!-- /.insta-block -->
 
-          <div class="col-12 col-md-3 facebook-block">
+          <div class="col-sm-12 col-md-3 facebook-block">
             <div class="title">
               <h2>facebook</h2>
               <a href="">@Follow us</a>
